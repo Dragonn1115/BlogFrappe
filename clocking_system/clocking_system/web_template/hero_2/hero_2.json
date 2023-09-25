@@ -1,0 +1,34 @@
+{
+ "__islocal": true,
+ "__unsaved": 1,
+ "creation": "2023-09-24 15:21:03.119620",
+ "docstatus": 0,
+ "doctype": "Web Template",
+ "fields": [
+  {
+   "__islocal": 1,
+   "__unsaved": 1,
+   "fieldname": "hero",
+   "fieldtype": "Data",
+   "label": "Hero",
+   "reqd": 0
+  },
+  {
+   "__islocal": 1,
+   "__unsaved": 1,
+   "fieldname": "hero2",
+   "fieldtype": "Int",
+   "label": "hero2",
+   "reqd": 0
+  }
+ ],
+ "idx": 0,
+ "modified": "2023-09-24 15:21:03.119620",
+ "modified_by": "Administrator",
+ "module": "Clocking System",
+ "name": "Hero 2",
+ "owner": "Administrator",
+ "standard": 1,
+ "template": "",
+ "type": "Section"
+}

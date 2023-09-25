@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestClocking(FrappeTestCase):
+class TestClockingbySelect(FrappeTestCase):
 	pass

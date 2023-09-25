@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "OG.######",
+ "autoname": "field:title",
  "creation": "2023-09-22 16:59:18.142969",
  "default_view": "List",
  "doctype": "DocType",
@@ -14,16 +14,19 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Title"
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-22 16:59:18.142969",
+ "modified": "2023-09-24 13:26:08.980163",
  "modified_by": "Administrator",
  "module": "Clocking System",
  "name": "Clocking Organization",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

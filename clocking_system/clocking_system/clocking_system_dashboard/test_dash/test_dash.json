@@ -1,0 +1,20 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "width": "Half"
+  }
+ ],
+ "creation": "2023-09-24 15:50:41.559694",
+ "dashboard_name": "test dash",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2023-09-24 15:50:41.559694",
+ "modified_by": "Administrator",
+ "module": "Clocking System",
+ "name": "test dash",
+ "owner": "Administrator"
+}

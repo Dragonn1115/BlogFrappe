@@ -11,39 +11,32 @@
  "field_order": [
   "name1",
   "organization",
-  "disabled",
-  "is_admin"
+  "clocking_code"
  ],
  "fields": [
   {
    "fieldname": "name1",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Name",
+   "reqd": 1,
    "unique": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "is_admin",
-   "fieldtype": "Check",
-   "label": "Is Admin"
-  },
-  {
-   "default": "0",
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled"
   },
   {
    "fieldname": "organization",
    "fieldtype": "Link",
    "label": "Organization",
-   "options": "Clocking Organization",
-   "unique": 1
+   "options": "Clocking Organization"
+  },
+  {
+   "fieldname": "clocking_code",
+   "fieldtype": "Data",
+   "label": "Clocking code"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-22 17:03:33.700751",
+ "modified": "2023-09-24 23:51:57.734911",
  "modified_by": "Administrator",
  "module": "Clocking System",
  "name": "Clock User",

@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{host}-{date}-{time_period}",
+ "creation": "2023-09-24 13:48:26.942771",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "host",
+  "time_period",
+  "date",
+  "member1",
+  "member2",
+  "member3",
+  "member4",
+  "member5",
+  "member6",
+  "member7",
+  "start_time",
+  "end_time",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "time_period",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Time Period",
+   "options": "00:00 - 01:00\n01:00 - 02:00\n02:00 - 03:00\n03:00 - 04:00\n04:00 - 05:00\n05:00 - 06:00\n06:00 - 07:00\n07:00 - 08:00\n08:00 - 09:00\n09:00 - 10:00\n10:00 - 11:00\n11:00 - 12:00\n12:00 - 13:00\n13:00 - 14:00\n14:00 - 15:00\n15:00 - 16:00\n16:00 - 17:00\n17:00 - 18:00\n18:00 - 19:00\n19:00 - 20:00\n20:00 - 21:00\n21:00 - 22:00\n22:00 - 23:00\n23:00 - 24:00",
+   "reqd": 1
+  },
+  {
+   "fieldname": "member1",
+   "fieldtype": "Link",
+   "label": "member1",
+   "options": "Clock User"
+  },
+  {
+   "fieldname": "member2",
+   "fieldtype": "Link",
+   "label": "member2",
+   "options": "Clock User"
+  },
+  {
+   "fieldname": "member3",
+   "fieldtype": "Link",
+   "label": "member3",
+   "options": "Clock User"
+  },
+  {
+   "fieldname": "member4",
+   "fieldtype": "Link",
+   "label": "member4",
+   "options": "Clock User"
+  },
+  {
+   "fieldname": "member5",
+   "fieldtype": "Link",
+   "label": "member5",
+   "options": "Clock User"
+  },
+  {
+   "fieldname": "member6",
+   "fieldtype": "Link",
+   "label": "member6",
+   "options": "Clock User"
+  },
+  {
+   "fieldname": "member7",
+   "fieldtype": "Link",
+   "label": "member7",
+   "options": "Clock User"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "host",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Host",
+   "options": "Clock User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Clocking by Select",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Date",
+   "label": "Start Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Date",
+   "label": "End Time",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "links": [],
+ "modified": "2023-09-24 17:45:30.734752",
+ "modified_by": "Administrator",
+ "module": "Clocking System",
+ "name": "Clocking by Select",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

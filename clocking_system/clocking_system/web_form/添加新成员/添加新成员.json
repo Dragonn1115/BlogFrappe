@@ -1,0 +1,89 @@
+{
+ "allow_comments": 0,
+ "allow_delete": 0,
+ "allow_edit": 1,
+ "allow_incomplete": 0,
+ "allow_multiple": 1,
+ "allow_print": 0,
+ "anonymous": 0,
+ "apply_document_permissions": 0,
+ "button_label": "Save",
+ "creation": "2023-09-24 23:41:36.322375",
+ "doc_type": "Clock User",
+ "docstatus": 0,
+ "doctype": "Web Form",
+ "idx": 0,
+ "is_standard": 1,
+ "list_columns": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "label": "Organization"
+  },
+  {
+   "fieldname": "clocking_code",
+   "fieldtype": "Data",
+   "label": "Clocking code"
+  }
+ ],
+ "list_title": "\u7528\u6237\u4fe1\u606f",
+ "login_required": 1,
+ "max_attachment_size": 0,
+ "modified": "2023-09-24 23:56:17.202148",
+ "modified_by": "Administrator",
+ "module": "Clocking System",
+ "name": "\u6dfb\u52a0\u65b0\u6210\u5458",
+ "owner": "Administrator",
+ "published": 1,
+ "route": "newmembers",
+ "show_attachments": 0,
+ "show_list": 1,
+ "show_sidebar": 1,
+ "title": "\u6dfb\u52a0\u65b0\u6210\u5458",
+ "web_form_fields": [
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "\u540d\u5b57",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "hidden": 0,
+   "label": "\u54ea\u4e2a\u5385",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Clocking Organization",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "clocking_code",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "\u6253\u5361\u5bc6\u7801",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  }
+ ],
+ "website_sidebar": "sidebar test"
+}

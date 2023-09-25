@@ -9,7 +9,7 @@
  "apply_document_permissions": 0,
  "button_label": "Save",
  "creation": "2023-09-22 10:08:32.077176",
- "doc_type": "Clocking",
+ "doc_type": "Clocking by text",
  "docstatus": 0,
  "doctype": "Web Form",
  "idx": 0,
@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-09-22 16:54:37.056287",
+ "modified": "2023-09-24 13:54:41.844256",
  "modified_by": "Administrator",
  "module": "Clocking System",
  "name": "clocking",
@@ -28,7 +28,7 @@
  "show_attachments": 0,
  "show_list": 0,
  "show_sidebar": 0,
- "title": "clocking",
+ "title": "clocking by text",
  "web_form_fields": [
   {
    "allow_read_on_all_link_options": 0,
