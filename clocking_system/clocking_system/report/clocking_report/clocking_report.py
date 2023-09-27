@@ -42,13 +42,18 @@ def execute(filters=None):
 
     # Prepare data for display
 	all_names = set(name for daily_counts in member_counts.values() for name in daily_counts.keys())
-	columns = ["Name"] + dates
+	columns = ["名字"] + dates + ["总计"]
 	data = []
 	for name in all_names:
 		row = [name]
+		total_count = 0  # Initialize the total count for this name
 		for date in dates:
-			row.append(member_counts[date].get(name, 0))
+			count = member_counts[date].get(name, 0)
+			row.append(count)
+			total_count += count  # Add the count for this date to the total
+		row.append(total_count)  # Add the total count to the row
 		data.append(row)
+
 
 	return columns, data
 

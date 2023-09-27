@@ -1,32 +1,16 @@
 {
  "add_total_row": 0,
- "columns": [
-  {
-   "fieldname": "345678765434567876",
-   "fieldtype": "Check",
-   "label": "column",
-   "width": 0
-  }
- ],
+ "columns": [],
  "creation": "2023-09-25 11:54:54.763832",
  "disabled": 0,
  "docstatus": 0,
  "doctype": "Report",
- "filters": [
-  {
-   "fieldname": "time_period",
-   "fieldtype": "Select",
-   "label": "\u65f6\u95f4\u6bb5",
-   "mandatory": 0,
-   "options": "this week\nnext week",
-   "wildcard_filter": 0
-  }
- ],
+ "filters": [],
  "idx": 0,
  "is_standard": "Yes",
  "letter_head": "5777",
  "letterhead": null,
- "modified": "2023-09-26 16:10:45.138918",
+ "modified": "2023-09-26 23:42:12.167873",
  "modified_by": "Administrator",
  "module": "Clocking System",
  "name": "clocking report",
