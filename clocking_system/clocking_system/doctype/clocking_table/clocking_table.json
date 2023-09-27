@@ -1,0 +1,35 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "test.####",
+ "creation": "2023-09-25 00:33:37.075399",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member1"
+ ],
+ "fields": [
+  {
+   "fieldname": "member1",
+   "fieldtype": "Link",
+   "label": "Member1",
+   "options": "Clock User"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-25 00:40:53.416198",
+ "modified_by": "Administrator",
+ "module": "Clocking System",
+ "name": "clocking table",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,127 @@
+<style>
+.member-table-component {
+    text-align: center;
+    padding: 20px;
+}
+
+.date-filter {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+</style>
+
+<div class="member-table-component">
+    <div class="date-filter form-inline">
+        <div class="form-group">
+            <label for="startDatePicker">Start Date:</label>
+            <input type="date" class="form-control" id="startDatePicker">
+        </div>
+        <div class="form-group">
+            <label for="endDatePicker">End Date:</label>
+            <input type="date" class="form-control" id="endDatePicker">
+        </div>
+        <button id="filterButton" class="btn btn-primary">Filter</button>
+    </div>
+    <table id="memberTable" class="table table-bordered">
+        <thead>
+            <!-- Headers will be populated dynamically -->
+        </thead>
+        <tbody>
+            <!-- Data will be populated dynamically -->
+        </tbody>
+    </table>
+</div>
+
+
+<script>
+
+
+frappe.ready(function() {
+    // Function to get start and end dates of the week
+    function getStartAndEndOfWeek(date) {
+        const start = new Date(date);
+        start.setDate(date.getDate() - date.getDay() );
+        const end = new Date(date);
+        end.setDate(date.getDate() - date.getDay() + 6);
+
+        return {
+            start: start.toISOString().split('T')[0],
+            end: end.toISOString().split('T')[0]
+        };
+    }
+
+    // Get the start and end dates
+    const { start, end } = getStartAndEndOfWeek(new Date());
+
+    // Set default dates to input fields
+    $('#startDatePicker').val(start);
+    $('#endDatePicker').val(end);
+
+    // Rest of your code...
+});
+
+
+frappe.ready(function() {
+    
+    // Function to fetch data based on date filters
+    function fetchData(startDate, endDate) {
+        console.log(startDate, endDate)
+        frappe.call({
+            method: 'clocking_system.clocking_system.report.clocking_report.clocking_report.get_clocking_report',
+            args: {
+                filters:{
+                    'start_time': startDate,
+                    'end_time': endDate
+                }
+            },
+            callback: function(r) {
+                if (r.message) {
+                    let data = r.message;
+
+                    // Populate headers
+                    let $tableHead = $('#memberTable thead');
+                    $tableHead.empty();
+                    let $headerRow = $('<tr>');
+                    data.columns.forEach(column => {
+                        $headerRow.append($('<th>').text(column));
+                    });
+                    $tableHead.append($headerRow);
+
+                    // Populate the table body
+                    let $tableBody = $('#memberTable tbody');
+                    $tableBody.empty();
+                    data.data.forEach(row => {
+                        let $tr = $('<tr>');
+                        row.forEach(cell => {
+                            $tr.append($('<td>').text(cell));
+                        });
+                        $tableBody.append($tr);
+                    });
+                }
+            }
+        });
+    }
+
+    // Event binding for the filter button
+    $('#filterButton').on('click', function() {
+        let startDate = $('#startDatePicker').val();
+        let endDate = $('#endDatePicker').val();
+
+        filters = {
+                    'start_time': startDate,
+                    'end_time': endDate
+                }
+        // Call the fetchData function with selected dates
+        fetchData(filters);
+    });
+
+
+    // Initial fetch (you can decide if you want an initial fetch without filters or not)
+    fetchData();
+});
+
+
+</script>

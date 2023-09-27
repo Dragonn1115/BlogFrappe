@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 # import frappe
+from frappe.website.website_generator import WebsiteGenerator
 from frappe.model.document import Document
 
 
@@ -9,6 +10,7 @@ class ClockingbySelect(Document):
 	
 	
 	def before_save(self):
+		return
 		# Split the time_period field to extract start and end times
 		start_time_str, end_time_str = self.time_period.split(" - ")
 

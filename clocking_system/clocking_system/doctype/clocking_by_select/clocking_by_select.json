@@ -9,8 +9,10 @@
  "engine": "InnoDB",
  "field_order": [
   "host",
+  "password",
   "time_period",
   "date",
+  "text",
   "member1",
   "member2",
   "member3",
@@ -18,6 +20,8 @@
   "member5",
   "member6",
   "member7",
+  "route",
+  "published",
   "start_time",
   "end_time",
   "amended_from"
@@ -109,16 +113,39 @@
    "fieldtype": "Date",
    "label": "End Time",
    "read_only": 1
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Text",
+   "label": "Text"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
- "is_calendar_and_gantt": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2023-09-24 17:45:30.734752",
+ "modified": "2023-09-26 23:00:07.527675",
  "modified_by": "Administrator",
  "module": "Clocking System",
  "name": "Clocking by Select",
  "naming_rule": "Expression",
+ "nsm_parent_field": "parent_clocking_by_select",
  "owner": "Administrator",
  "permissions": [
   {
@@ -135,6 +162,7 @@
   }
  ],
  "quick_entry": 1,
+ "route": "records",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
